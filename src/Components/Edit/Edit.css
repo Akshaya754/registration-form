@@ -1,0 +1,140 @@
+/* Edit.css */
+
+.edit-container {
+  padding: 20px;
+  background-color: rgba(152, 146, 146, 0.222);
+  border-radius: 8px;
+  width: 600px;
+  height:600px;
+  color: gray;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: gray;
+  font-weight: bold;
+}
+
+.edit-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(97, 107, 107);
+}
+
+.label {
+  color: rgb(87, 95, 95);
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+input {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.submit-btn {
+  background-color: #2fbb9e;
+  color: #fff;
+  padding: 10px 15px;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+height: 40px;
+font-size: 20px;
+}
+
+.cancel-btn {
+  background-color: #2fbb9e;
+  color: #fff;
+  padding: 10px 15px;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height:40px;
+  font-size: 20px;
+}
+
+.container-home {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/green-palm-leaves-shadow-white-background.jpg");
+  height: 100vh;
+  width: 100-vw;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.profile-img,
+.avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.btn-group{
+  display: flex;
+  justify-content: space-around;
+  gap:75px;
+  margin-top: 20px;
+}
+
+  .edit-form {
+  position: relative;
+}
+
+.profile-img {
+  position: relative;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 280px;
+  right: 235px;
+  background-color: #36d7b7;
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.edit-form {
+  position: relative;
+}
+
+.profile-img {
+  position: relative;
+}
+
+
+.edit-icon svg {
+  color: #fff;
+}
+
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}

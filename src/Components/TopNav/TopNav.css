@@ -1,0 +1,113 @@
+/* NavBar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+    width: 100%; 
+    top: 0; 
+  }
+  
+  .app-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+  }
+
+  .menu-drop {
+    cursor: pointer;
+    position: fixed;
+ margin-left: 1850px;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: fit-content;
+    padding: 30px;
+    height: fit-content;
+    background-color: rgba(253, 252, 250, 0.986);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .list-button,
+  .delete-btn {
+    background-color: #e74c3c; 
+    color: #fff; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .list-button:hover,
+  .delete-btn:hover {
+    background-color: #c0392b; /* Change the background color on hover */
+  }
+
+  .logout-btn {
+    background-color: #e74c3c; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  .logout-btn:hover {
+    background-color: #c0392b; /* Change the background color on hover */
+  }
+
+  .profile-button{
+    background-color: #e74c3c; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .profile-button:hover {
+    background-color: #c0392b; /* Change the background color on hover */
+  }
+
+  .react-icon{
+    margin-left: 5px;
+    width: 30px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+
+  .btnFlex{
+    display:flex;
+    align-items: center;
+    padding-left: 50px;
+    position: relative;
+
+  }

@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins' ,sans-serif;
+}
+.registration-container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/green-palm-leaves-shadow-white-background.jpg");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.registration-heading {
+  color: rgb(87, 95, 95);
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.registration-form {
+  padding: 20px;
+  background-color: rgba(52, 51, 51, 0.222);
+  border-radius: 8px;
+ 
+   width: 600px;
+  height: 580px; 
+  
+}
+ 
+.registration-form label {
+  color:rgb(118, 116, 116);
+font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+ 
+.registration-form input {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+  height: 20px;
+  font-size: 18px;
+}
+ 
+.registration-form button {
+  /* background-color: rgb(72, 200, 176); */
+  background-color: rgb(224, 46, 76);
+ 
+  color: #fff;
+  padding: 10px 15px;
+  /* width: 100%; */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  
+}
+ 
+.submit-butn {
+  width: 588px;
+  color: pink;
+  margin-top: 15px;
+}
+ 

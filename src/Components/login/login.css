@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' ,sans-serif;
+  }
+  .login-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/green-palm-leaves-shadow-white-background.jpg");
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-heading {
+    color: rgb(45, 42, 42);
+
+    margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .login-form {
+    padding: 20px;
+    background-color: rgba(52, 51, 51, 0.222);
+    border-radius: 8px;
+    width: 600px;
+    height: 400px;
+    font-size: 20px;
+  }
+  .login-form button {
+    background-color: rgb(224, 46, 76);
+    color: #fff;
+    padding: 10px 15px;
+    width: 588px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .login-form label {
+    color: rgb(107, 120, 120);
+
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  
+  .login-form input {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
