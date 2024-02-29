@@ -6,13 +6,16 @@ import "./Edit.css";
 import { doc, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import db, { storage } from "../../firebase";
+import {  deleteObject } from "firebase/storage";
+
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import defaultAvatar from "../../assets/avatar.jpeg";
 import NavBar from "../TopNav/TopNav";
-import { FaPlus } from 'react-icons/fa';
+import { FaPlus , FaMinus} from 'react-icons/fa';
+import { updateUserProfileImage } from "../../features/user/userSlice";
 
 const EditModal = () => {
   const dispatch = useDispatch();
@@ -23,6 +26,7 @@ const EditModal = () => {
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const fileInputRef = React.createRef();
   const [isImageEnlarged, setIsImageEnlarged] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 
   const [editedData, setEditedData] = useState({
@@ -41,7 +45,7 @@ const EditModal = () => {
 
   const handleInputChange = (e) => {
     if (e.target.name === "phone") {
-      const inputValue = e.target.value.replace(/\D/g, ''); // Remove non-digit characters
+      const inputValue = e.target.value.replace(/\D/g, ''); 
       if (inputValue.length > 12) {
         toast.error("Phone number should not exceed 12 digits");
         return;
@@ -128,6 +132,43 @@ const EditModal = () => {
     });
   };
 
+  const handleRemoveImage = async () => {
+    try {
+      const userDocRef = doc(db, "users", user.userId);
+      const imageRef = ref(storage, `profile_images/${user.userId}`);
+
+      const downloadURL = await getDownloadURL(imageRef);
+
+      if (downloadURL) {
+        await deleteObject(imageRef);
+      }
+
+      await updateDoc(userDocRef, { profileImage: null });
+
+      dispatch(updateUserProfileImage({ profileImage: null }));
+
+      console.log("Profile image removed successfully");
+    } catch (error) {
+      console.error("Error removing profile image: ", error.message);
+    }
+  };
+
+  const handleRemoveImageOption = async () => {
+
+    const isConfirmed = window.confirm("Are you sure you want to remove your profile picture?");
+    if (isConfirmed) {
+
+    try {
+      await handleRemoveImage();
+      setIsMenuOpen(false);
+      navigate("/details");
+    } catch (error) {
+      console.error("Error handling remove image option: ", error.message);
+    }
+}
+  };
+
+
   return (
     <div>
       <NavBar />
@@ -191,6 +232,14 @@ const EditModal = () => {
                 value={editedData.phone}
                 onChange={handleInputChange}
               />
+
+              {user.profileImage && (
+                <div className="remove-image" onClick={handleRemoveImageOption}>
+                  <FaMinus />
+                </div>
+              )}
+
+
               <div className="btn-group">
                 <button
                   className="cancel-btn"

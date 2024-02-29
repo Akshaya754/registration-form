@@ -1,4 +1,3 @@
-/* NavBar.css */
 
 .navbar {
     display: flex;
@@ -59,28 +58,28 @@
   
   .list-button:hover,
   .delete-btn:hover {
-    background-color: #c0392b; /* Change the background color on hover */
+    background-color: #c0392b;
   }
 
   .logout-btn {
-    background-color: #e74c3c; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #e74c3c; 
+    color: #fff; 
     padding: 10px;
     border: none;
     border-radius: 5px;
     width: 200px;
     cursor: pointer;
     margin-top: 10px;
-    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    transition: background-color 0.3s ease; 
   }
   
   .logout-btn:hover {
-    background-color: #c0392b; /* Change the background color on hover */
+    background-color: #c0392b; 
   }
 
   .profile-button{
-    background-color: #e74c3c; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #e74c3c; 
+    color: #fff; 
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -91,7 +90,7 @@
   }
 
   .profile-button:hover {
-    background-color: #c0392b; /* Change the background color on hover */
+    background-color: #c0392b; 
   }
 
   .react-icon{

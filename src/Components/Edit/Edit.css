@@ -138,3 +138,15 @@ font-size: 20px;
   height: 100vh;
 
 }
+.remove-image{
+position: absolute;
+bottom: 280px;
+right: 235px;
+background-color: #36d7b7;
+height: 30px;
+width: 30px;
+display: grid;
+place-items: center;
+border-radius: 50%;
+cursor: pointer;
+}

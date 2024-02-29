@@ -1,0 +1,22 @@
+.confirmation-dialog {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .confirmation-message {
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .confirmation-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  

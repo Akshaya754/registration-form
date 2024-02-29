@@ -17,7 +17,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { FaClipboardList } from "react-icons/fa";
 import { IoLogOutSharp } from "react-icons/io5";
 import { IoTrashBinSharp } from "react-icons/io5";
-
+import CustomConfirmation from "../Confirmation/Confirmation"
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,26 +30,26 @@ const NavBar = () => {
     setIsMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
 
-  const handleRemoveImage = async () => {
-    try {
-      const userDocRef = doc(db, "users", user.userId);
-      const imageRef = ref(storage, `profile_images/${user.userId}`);
+  // const handleRemoveImage = async () => {
+  //   try {
+  //     const userDocRef = doc(db, "users", user.userId);
+  //     const imageRef = ref(storage, `profile_images/${user.userId}`);
 
-      const downloadURL = await getDownloadURL(imageRef);
+  //     const downloadURL = await getDownloadURL(imageRef);
 
-      if (downloadURL) {
-        await deleteObject(imageRef);
-      }
+  //     if (downloadURL) {
+  //       await deleteObject(imageRef);
+  //     }
 
-      await updateDoc(userDocRef, { profileImage: null });
+  //     await updateDoc(userDocRef, { profileImage: null });
 
-      dispatch(updateUserProfileImage({ profileImage: null }));
+  //     dispatch(updateUserProfileImage({ profileImage: null }));
 
-      console.log("Profile image removed successfully");
-    } catch (error) {
-      console.error("Error removing profile image: ", error.message);
-    }
-  };
+  //     console.log("Profile image removed successfully");
+  //   } catch (error) {
+  //     console.error("Error removing profile image: ", error.message);
+  //   }
+  // };
 
 //   const handleRemoveImageOption = async () => {
 
@@ -115,9 +115,16 @@ const NavBar = () => {
 //     }
 // }
 //   };
+const handleDeleteCancel = () => {
+  console.log("Deletion canceled");
+};
 
 const handleDelete = async () => {
-  const isConfirmed = window.confirm("Are you sure you want to delete your account?");
+  const isConfirmed = await CustomConfirmation({
+  message: "Are you sure you want to delete your account?",
+  onConfirm: handleDelete,
+  onCancel: handleDeleteCancel
+  });
   if (isConfirmed) {
     try {
       const auth = getAuth();

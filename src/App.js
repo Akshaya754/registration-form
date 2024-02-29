@@ -7,7 +7,6 @@ import Details from "./Components/Details/Details";
 import LoginForm from "./Components/login/login";
 import EditModal from "./Components/Edit/Edit";
 import UsersList from "./Components/List/list";
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {

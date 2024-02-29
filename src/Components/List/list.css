@@ -60,5 +60,5 @@ padding: 30px;
     width: 500px;
     height: 500px;
     object-fit: cover;
-    border-radius: 50%; /* Maintain aspect ratio while fitting inside the container */
+    border-radius: 50%; 
   }
